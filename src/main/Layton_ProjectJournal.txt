@@ -1,0 +1,5 @@
+Reuben Layton, Java, Fall 2026
+
+10/10/2026
+- Structure everything first, creating an outline. Like my classes, attributes, and methods.
+- Run my first tests for my file connections
