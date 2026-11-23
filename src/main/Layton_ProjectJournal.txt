@@ -6,4 +6,4 @@ Reuben Layton, Java, Fall 2026
 
 11/23/2026
 - Structured both Task.java and Driver.java
-- Next I need to work on TaskFileManager.java and eventually run first tests.
+- Next I need to work on TaskFileManager.java and eventually run first tests
