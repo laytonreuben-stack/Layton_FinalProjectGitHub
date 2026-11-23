@@ -3,3 +3,7 @@ Reuben Layton, Java, Fall 2026
 10/10/2026
 - Structure everything first, creating an outline. Like my classes, attributes, and methods.
 - Run my first tests for my file connections
+
+11/23/2026
+- Structured both Task.java and Driver.java
+- Next I need to work on TaskFileManager.java and eventually run first tests.
