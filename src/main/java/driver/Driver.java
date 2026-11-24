@@ -36,7 +36,7 @@ public class Driver {
                 case 3 -> markTaskComplete();
                 case 4 -> removeTask();
                 case 5 -> showUpcomingTasks();
-                case 6 -> fileManager.saveTasks(tasks);
+                case 6 -> {
                     fileManager.saveTasks(tasks);
                     System.out.println("Tasks saved!");
                     running = false;
@@ -46,7 +46,15 @@ public class Driver {
         }
     }
     private void showMenu() {
-
+        System.out.println("""
+                |> Classwork Planner <|
+                1. View My Tasks
+                2. Add Task
+                3. Mark Tasks Complete
+                4. Remove Task
+                5. View Deadlines
+                6. Save And Exit
+                """);
     }
 
     private void addTask() {
