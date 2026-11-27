@@ -58,19 +58,68 @@ public class Driver {
     }
 
     private void addTask() {
+        System.out.println("\nAdd task");
 
+        String course = readRequiredText("Course: ");
+        String title = readRequiredText("Assignment name: ");
+        String description = readRequiredText("Description: ");
+        LocalDate dueDate = readDate("Due date (YYYY-MM-DD): ");
+        double hours = readNonNegativeDouble("Estimated study hours: ");
+
+        tasks.add(new Task(course, title, description, dueDate, hours));
+        fileManager.saveTasks(tasks);
+        System.out.println("Task added!");
     }
 
     private void displayTasks() {
+        System.out.println("\nAll Tasks");
 
+        if (tasks.isEmpty) {
+            System.out.println("No tasks have been added");
+            return;
+        }
+
+        for (int i = 0; i < task.size(); i++) {
+            System.out.println((i + 1) + ". " + tasks.get(i));
+        }
     }
 
     private void markTaskComplete() {
+        displayTasks();
 
+        if (tasks.isEmpty) {
+            return;
+        }
+
+        int number = readInt("Enter the task number to mark complete: ");
+
+        if (!isValidTaskNumber(number)) {
+            System.out.println("Task number is not valid");
+            return;
+        }
+
+        tasks.get(number - 1).markComplete();
+        fileManager.saveTasks(tasks);
+        System.out.println("Tasks marked complete");
     }
 
     private void removeTask() {
+        displayTasks();
 
+        if (tasks.isEmpty()) {
+            return;
+        }
+
+        int number = readInt("Enter the task number to remove: ");
+
+        if (!isValidTaskNumber(number)) {
+            System.out.println("Task number is not valid");
+            return;
+        }
+
+        Task removed = tasks.remove(number - 1);
+        fileManager.saveTasks(tasks);
+        System.out.println("Removed: " + removed.getTitle());
     }
 
     private void showUpcomingTasks() {

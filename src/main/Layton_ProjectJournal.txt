@@ -11,3 +11,7 @@ Reuben Layton, Java, Fall 2026
 11/24/2026
 - Structured TaskFileManager.java, fixed errors in my run() method (in Driver.java), and created my options menu for Driver.java.
 - Next I want to run my first tests
+
+11/26/2026
+- Made the displayTasks(), markTaskComplete(), and removeTask() methods functional (in Driver.java).
+- Next I would like to finish the rest of my option methods to become functional.
